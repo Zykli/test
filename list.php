@@ -105,10 +105,10 @@
 					<?php foreach ($categoryMassForView as $rowcategory): ?>
 					<li id="<?=$rowcategory["name"]?>" class="category-head"><?= htmlspecialchars($rowcategory["name"])?></li>
 						<?php foreach ($questionMass as $rowquestion): ?>
-							<?php if($rowcategory["id"] == $rowquestion["category_id"] && $rowquestion["anwer"]): ?>
+							<?php if($rowcategory["id"] == $rowquestion["category_id"] && $rowquestion["answer"]): ?>
 							<li style="border: 1px solid;">
 								<a class="wordign" href="#<?= $rowquestion["id"]?>" style="display: block; width: 600px; word-break: break-word;"><?= htmlspecialchars($rowquestion["wordign"])?></a>
-								<div id="<?= $rowquestion["id"]?>" style="display: none; width: 600px; word-break: break-word;"><?= htmlspecialchars($rowquestion["anwer"])?></div>
+								<div id="<?= $rowquestion["id"]?>" style="display: none; width: 600px; word-break: break-word;"><?= htmlspecialchars($rowquestion["answer"])?></div>
 							</li>
 							<?php endif ?>
 						<?php endforeach ?>
